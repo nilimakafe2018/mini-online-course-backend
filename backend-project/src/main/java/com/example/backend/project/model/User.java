@@ -1,5 +1,6 @@
 package com.example.backend.project.model;
 import jakarta.persistence.*;
+import jakarta.persistence.OneToOne;
 
 @Entity
 @Table(name = "users")
@@ -27,6 +28,9 @@ public class User{
         this.certificateCreated=false;
     }
 
+    @OneToOne(mappedBy="user", cascade=CascadeType.ALL)
+    private Certificate certificate;
+
     //Getters and Setters
     public Long getId() {return id;}
 
@@ -42,5 +46,12 @@ public class User{
     public boolean isCertificateCreated() {return certificateCreated;}
     public void setCertificateCreated(boolean certificateCreated){
         this.certificateCreated = certificateCreated;
+    }
+
+    public Certificate getCertificate() {
+        return certificate;
+    }
+    public void setCertificate(Certificate certificate){
+        this.certificate=certificate;
     }
 }
