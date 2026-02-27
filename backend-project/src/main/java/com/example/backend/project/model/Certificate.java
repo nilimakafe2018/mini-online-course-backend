@@ -11,29 +11,23 @@ public class Certificate {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    private String userName;
     private LocalDate issueDate;
 
     @OneToOne
     @JoinColumn(name="user_id", nullable = false)
     private User user;
 
-    public Certificate(String userName,LocalDate issueDate,User user) {
-        this.userName=userName;
+    //default constructor required by JPA
+    public Certificate() {}
+
+
+    public Certificate(LocalDate issueDate,User user) {
         this.issueDate=issueDate;
         this.user=user;
     }
 
     public Long getId(){
         return id;
-    }
-
-    public String getUsername(){
-        return userName;
-    }
-
-    public void setUserName(String userName){
-        this.userName=userName;
     }
 
     public LocalDate getIssueDate(){
@@ -50,6 +44,12 @@ public class Certificate {
 
     public void setUser(User user){
         this.user=user;
+    }
+
+    //method to get the user name for the certificate automatically
+    @Transient
+    public String getUserName(){
+        return user != null ? user.getName() : null;
     }
 
 }
