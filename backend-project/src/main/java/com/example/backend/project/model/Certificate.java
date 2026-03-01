@@ -29,6 +29,10 @@ public class Certificate {
         this.issueDate = LocalDate.now();
     }
 
+    public String getCertificateColor(){
+        return certificateColor;
+    }
+
     //getters and setters
     public Long getId(){
         return id;

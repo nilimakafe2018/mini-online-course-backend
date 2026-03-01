@@ -29,19 +29,24 @@ public class CertificateController {
         User user = userRepository.findById(userId).orElseThrow();
 
         //prevent duplicate certificate
-        if (user.isCertificateCreated()) {
-            return ResponseEntity
-                    .badRequest()
+        if (certificateRepository.findByUserId(userId).isPresent()) {
+            return ResponseEntity.badRequest()
                     .body("Certificate already exists for this user");
         }
 
         Certificate certificate = new Certificate(user, color);
         user.setCertificateCreated(true);
         user.setCertificate(certificate);
+        userRepository.save(user);
 
         certificateRepository.save(certificate);
 
         return ResponseEntity.ok(certificate);
+    }
+
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<?> getCertificateByUser(@PathVariable Long userId) {
+        return certificateRepository.findByUserId(userId).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
 
 }

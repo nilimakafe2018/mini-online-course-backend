@@ -1,6 +1,7 @@
 package com.example.backend.project.model;
 import jakarta.persistence.*;
 import jakarta.persistence.OneToOne;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "users")
@@ -29,6 +30,7 @@ public class User{
     }
 
     @OneToOne(mappedBy="user", cascade=CascadeType.ALL)
+    @JsonIgnore
     private Certificate certificate;
 
     //Getters and Setters
