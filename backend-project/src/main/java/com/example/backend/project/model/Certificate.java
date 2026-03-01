@@ -13,19 +13,23 @@ public class Certificate {
 
     private LocalDate issueDate;
 
+    private String certificateColor;
+
     @OneToOne
-    @JoinColumn(name="user_id", nullable = false)
+    @JoinColumn(name="user_id", unique=true)
     private User user;
 
     //default constructor required by JPA
     public Certificate() {}
 
 
-    public Certificate(LocalDate issueDate,User user) {
-        this.issueDate=issueDate;
+    public Certificate(User user, String certificateColor) {
         this.user=user;
+        this.certificateColor = certificateColor;
+        this.issueDate = LocalDate.now();
     }
 
+    //getters and setters
     public Long getId(){
         return id;
     }
@@ -34,8 +38,8 @@ public class Certificate {
         return issueDate;
     }
 
-    public void setIssueDate(LocalDate issueDate){
-        this.issueDate=issueDate;
+    public void setCertificateColor(String certificateColor){
+        this.certificateColor=certificateColor;
     }
 
     public User getUser(){
@@ -45,11 +49,4 @@ public class Certificate {
     public void setUser(User user){
         this.user=user;
     }
-
-    //method to get the user name for the certificate automatically
-    @Transient
-    public String getUserName(){
-        return user != null ? user.getName() : null;
-    }
-
 }
