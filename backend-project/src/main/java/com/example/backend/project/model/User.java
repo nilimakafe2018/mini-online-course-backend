@@ -56,4 +56,5 @@ public class User{
     public void setCertificate(Certificate certificate){
         this.certificate=certificate;
     }
+
 }
