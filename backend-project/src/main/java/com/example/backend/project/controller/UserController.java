@@ -5,10 +5,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
-@RequestMapping ("/api/users")
+@RequestMapping ("/api/users") //base path for my endpoints
 @CrossOrigin
 
 public class UserController {
@@ -18,25 +17,25 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    //create a new user
+    //creating a new user
     @PostMapping
     public User createUser(@RequestBody User user) {
         return userRepository.save(user);
     }
 
-    //read all users
+    //reading all users
     @GetMapping
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    //read one user by id
+    //reading one user by id
     @GetMapping("/{id}")
     public User getUserById(@PathVariable Long id) {
         return userRepository.findById(id).orElseThrow();
     }
 
-    //update user
+    //updating user
     @PutMapping("/{id}")
     public User updateUser(@PathVariable Long id, @RequestBody User updatedUser) {
         User user = userRepository.findById(id).orElseThrow();
@@ -46,7 +45,7 @@ public class UserController {
         return userRepository.save(user);
     }
 
-    //delete user
+    //deleting user
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);

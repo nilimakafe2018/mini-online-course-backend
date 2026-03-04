@@ -35,7 +35,7 @@ public class CertificateController {
         }
 
         Certificate certificate = new Certificate(user, color);
-        user.setCertificateCreated(true);
+        //user.setCertificateCreated(true);
         user.setCertificate(certificate);
         userRepository.save(user);
 

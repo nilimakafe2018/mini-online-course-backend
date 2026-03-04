@@ -1,6 +1,6 @@
 package com.example.backend.project.model;
 import jakarta.persistence.*;
-import jakarta.persistence.OneToOne;
+//import jakarta.persistence.OneToOne;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -15,10 +15,10 @@ public class User{
     private String email;
     private String password;
 
-    @Column(name="Certificate_Created")
-    private boolean certificateCreated;
+//    @Column(name="Certificate_Created")
+//    private boolean certificateCreated;
 
-    //required  by JPA
+    //required  by JPA, default constructor that is needed to create object from database rows
     public User() {}
 
     //constructor
@@ -26,7 +26,7 @@ public class User{
         this.name=name;
         this.email=email;
         this.password=password;
-        this.certificateCreated=false;
+        //this.certificateCreated=false;
     }
 
     @OneToOne(mappedBy="user", cascade=CascadeType.ALL)
@@ -45,10 +45,10 @@ public class User{
     public String getPassword(){return password;}
     public void setPassword(String password){ this.password = password; }
 
-    public boolean isCertificateCreated() {return certificateCreated;}
-    public void setCertificateCreated(boolean certificateCreated){
-        this.certificateCreated = certificateCreated;
-    }
+//    public boolean isCertificateCreated() {return certificateCreated;}
+//    public void setCertificateCreated(boolean certificateCreated){
+//        this.certificateCreated = certificateCreated;
+//    }
 
     public Certificate getCertificate() {
         return certificate;
