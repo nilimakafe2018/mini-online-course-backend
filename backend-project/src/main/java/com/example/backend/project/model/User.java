@@ -1,7 +1,7 @@
 package com.example.backend.project.model;
 import jakarta.persistence.*;
-//import jakarta.persistence.OneToOne;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+//import jakarta.persistence.OneToOne;
 
 @Entity
 @Table(name = "users")
