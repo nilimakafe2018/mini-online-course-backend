@@ -41,7 +41,7 @@ public class UserController {
         User user = userRepository.findById(id).orElseThrow();
         user.setName(updatedUser.getName());
         user.setEmail(updatedUser.getEmail());
-        user.setPassword(updatedUser.getPassword());
+        user.setInstitution(updatedUser.getInstitution());
         return userRepository.save(user);
     }
 

@@ -13,7 +13,7 @@ public class User{
 
     private String name;
     private String email;
-    private String password;
+    private String institution;
 
 //    @Column(name="Certificate_Created")
 //    private boolean certificateCreated;
@@ -22,10 +22,10 @@ public class User{
     public User() {}
 
     //constructor
-    public User(String name, String email, String password){
+    public User(String name, String email, String institution) {
         this.name=name;
         this.email=email;
-        this.password=password;
+        this.institution=institution;
         //this.certificateCreated=false;
     }
 
@@ -42,8 +42,8 @@ public class User{
     public String getEmail(){return email;}
     public void setEmail(String email){ this.email = email; }
 
-    public String getPassword(){return password;}
-    public void setPassword(String password){ this.password = password; }
+    public String getInstitution(){return institution;}
+    public void setInstitution(String institution){this.institution = institution;}
 
 //    public boolean isCertificateCreated() {return certificateCreated;}
 //    public void setCertificateCreated(boolean certificateCreated){
