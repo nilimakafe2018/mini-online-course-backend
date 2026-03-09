@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
 @RestController
-@RequestMapping("/api/certificates")
+@RequestMapping("/api/certificates") //basepath for my endpoints
 @CrossOrigin
 public class CertificateController {
 
@@ -35,9 +35,6 @@ public class CertificateController {
         }
 
         Certificate certificate = new Certificate(user, color);
-        //user.setCertificateCreated(true);
-        user.setCertificate(certificate);
-        userRepository.save(user);
 
         certificateRepository.save(certificate);
 
