@@ -3,7 +3,6 @@ import com.example.backend.project.model.User;
 import com.example.backend.project.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
-
 import java.util.List;
 
 @RestController
@@ -17,10 +16,12 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    //creating a new user
+    //check if the email already exists, if not create a new user
     @PostMapping
-    public User createUser(@RequestBody User user) {
-        return userRepository.save(user);
+    public ResponseEntity<?> createUser(@RequestBody User user) {
+        return userRepository.findByEmail(user.getEmail())
+                .<ResponseEntity<?>>map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.ok(userRepository.save(user)));
     }
 
     //reading all users
@@ -41,14 +42,14 @@ public class UserController {
         User user = userRepository.findById(id).orElseThrow();
         user.setName(updatedUser.getName());
         user.setEmail(updatedUser.getEmail());
-        user.setPassword(updatedUser.getPassword());
+        user.setInstitution(updatedUser.getInstitution());
         return userRepository.save(user);
     }
-
     //deleting user
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
 }

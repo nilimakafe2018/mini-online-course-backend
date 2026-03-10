@@ -1,5 +1,4 @@
 package com.example.backend.project.controller;
-
 import com.example.backend.project.model.Certificate;
 import com.example.backend.project.model.User;
 import com.example.backend.project.repository.CertificateRepository;
@@ -20,6 +19,7 @@ public class CertificateController {
         this.userRepository = userRepository;
     }
 
+
     // create certificate for user
     @PostMapping("/{userId}")
     public ResponseEntity<?> createCertificate(
@@ -35,9 +35,6 @@ public class CertificateController {
         }
 
         Certificate certificate = new Certificate(user, color);
-        //user.setCertificateCreated(true);
-        user.setCertificate(certificate);
-        userRepository.save(user);
 
         certificateRepository.save(certificate);
 
@@ -48,5 +45,4 @@ public class CertificateController {
     public ResponseEntity<?> getCertificateByUser(@PathVariable Long userId) {
         return certificateRepository.findByUserId(userId).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
-
 }
