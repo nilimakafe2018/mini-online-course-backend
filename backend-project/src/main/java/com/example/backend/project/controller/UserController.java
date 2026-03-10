@@ -45,7 +45,6 @@ public class UserController {
         user.setInstitution(updatedUser.getInstitution());
         return userRepository.save(user);
     }
-
     //deleting user
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
