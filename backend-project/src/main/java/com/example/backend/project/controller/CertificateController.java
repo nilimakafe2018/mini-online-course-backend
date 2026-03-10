@@ -44,5 +44,4 @@ public class CertificateController {
     public ResponseEntity<?> getCertificateByUser(@PathVariable Long userId) {
         return certificateRepository.findByUserId(userId).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
-
 }
