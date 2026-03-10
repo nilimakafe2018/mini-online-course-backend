@@ -1,5 +1,4 @@
 package com.example.backend.project.repository;
-
 import com.example.backend.project.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,5 +1,4 @@
 package com.example.backend.project.controller;
-
 import com.example.backend.project.model.Certificate;
 import com.example.backend.project.model.User;
 import com.example.backend.project.repository.CertificateRepository;
@@ -8,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
 @RestController
-@RequestMapping("/api/certificates") //basepath for my endpoints
+@RequestMapping("/api/certificates")
 @CrossOrigin
 public class CertificateController {
 
