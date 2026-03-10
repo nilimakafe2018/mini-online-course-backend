@@ -19,6 +19,7 @@ public class CertificateController {
         this.userRepository = userRepository;
     }
 
+
     // create certificate for user
     @PostMapping("/{userId}")
     public ResponseEntity<?> createCertificate(
