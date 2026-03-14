@@ -54,4 +54,5 @@ public class CertificateController {
         certificateRepository.save(certificate);
         return ResponseEntity.ok(certificate);
     }
+
 }
