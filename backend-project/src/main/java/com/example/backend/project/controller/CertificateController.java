@@ -19,7 +19,6 @@ public class CertificateController {
         this.userRepository = userRepository;
     }
 
-
     // create certificate for user
     @PostMapping("/{userId}")
     public ResponseEntity<?> createCertificate(
@@ -35,7 +34,6 @@ public class CertificateController {
         }
 
         Certificate certificate = new Certificate(user, color);
-
         certificateRepository.save(certificate);
 
         return ResponseEntity.ok(certificate);
@@ -44,5 +42,16 @@ public class CertificateController {
     @GetMapping("/user/{userId}")
     public ResponseEntity<?> getCertificateByUser(@PathVariable Long userId) {
         return certificateRepository.findByUserId(userId).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    }
+
+    @PutMapping("/{userId}")
+    public ResponseEntity<?> updateCertificateColor(
+            @PathVariable Long userId,
+            @RequestParam String color
+    ) {
+        Certificate certificate = certificateRepository.findByUserId(userId).orElseThrow();
+        certificate.setCertificateColor(color);
+        certificateRepository.save(certificate);
+        return ResponseEntity.ok(certificate);
     }
 }
