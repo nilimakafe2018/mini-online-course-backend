@@ -7,6 +7,7 @@ import java.time.LocalDate;
 
 public class Certificate {
 
+    //primary key for certificate table
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
@@ -19,10 +20,9 @@ public class Certificate {
     @JoinColumn(name="user_id", unique=true)
     private User user;
 
-    //default constructor required by JPA
     public Certificate() {}
 
-
+    //constructor used when creating new certificate
     public Certificate(User user, String certificateColor) {
         this.user=user;
         this.certificateColor = certificateColor;
@@ -33,7 +33,7 @@ public class Certificate {
         return certificateColor;
     }
 
-    //getters and setters
+    //getters for certificate id, issue date
     public Long getId(){
         return id;
     }
@@ -42,14 +42,17 @@ public class Certificate {
         return issueDate;
     }
 
+    //updating certificate color
     public void setCertificateColor(String certificateColor){
         this.certificateColor=certificateColor;
     }
 
+    //returning the user associated with this certificate
     public User getUser(){
         return user;
     }
 
+    //updating the user associated with the certificate
     public void setUser(User user){
         this.user=user;
     }

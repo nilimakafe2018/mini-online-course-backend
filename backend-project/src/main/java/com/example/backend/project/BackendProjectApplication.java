@@ -6,7 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BackendProjectApplication {
 
-	public static void main(String[] args) {
+	//main method to run the Spring Boot application-entry point
+    public static void main(String[] args) {
 		SpringApplication.run(BackendProjectApplication.class, args);
 	}
 }
