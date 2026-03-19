@@ -1,0 +1,60 @@
+/* styling main header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  padding-left: 0;       /* removing left padding */
+  padding-right: 30px;   /* moving Contact Us slightly left */
+  background-color: rgb(133, 241, 133);
+  font-size: 15px;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;  /* keeping header above other elements */
+}
+
+.header-left .logo {
+  height: 70px;
+}
+
+.header-right a { 
+  padding-right: 10px; }
+
+/* Navigation (right side) */
+.header-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Navigation items styled like hyperlinks */
+.nav-item {
+  cursor: pointer;
+  text-decoration: underline;
+  color: black;
+  font-size: 16px;
+}
+
+.logo {
+  max-height: 50px;
+  width: auto;
+  margin-left: 10px;
+}
+
+/* media query for responsive design */
+/* in small screen less than 600px, header items stack vertically */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 8px 12px;
+  }
+
+  .header-right {
+    margin-top: 8px;
+    gap: 12px; /* smaller spacing on mobile */
+  }
+}
