@@ -2,7 +2,7 @@
 
 ## 📖 Project Overview: 
 
-My project is a full-stack web application that simulates a mini online learning experience for process Feedback users. The application allows users to enter their name, email and institution, watch an instructional video, complete a quiz, and receive a custom certificate after passing the course.
+My project is a full-stack web application that simulates a mini online learning experience for process Feedback users. The application allows users to enter their name, email and institution, watch an instructional video on how to navigate Process Feedback tool, complete a quiz, and receive a custom certificate after passing the course.
 
 One of the key features of this project is enforcing a one-to-one relationship between users and certificates, making sure that each user can create one certificate while still being able to download it anytime they return. 
 
@@ -53,7 +53,7 @@ npm install
 ```
 Start the development server:
 ```bash
-npm rundev
+npm run dev
 ```
 After completing all these steps, frontend will run at http://localhost:5175
 
@@ -73,10 +73,14 @@ spring.datasource.password=your_password
 http://localhost:8080
 ```
 🎨 **View the Wireframe here:**
+```
 
 https://www.canva.com/design/DAHBPE4rEY0/1yU2vUvkmnaTCmVVv1qYxg/edit
 
+---
+
 🗂️ **View the ER diagram here:**
+```
 
 https://lucid.app/lucidchart/43f4d0c7-daef-464c-a1fb-66d1bf267ce7/edit?viewport_loc=563%2C4%2C1617%2C935%2C0_0&invitationId=inv_dcb9be36-559b-4083-871b-ba4fe285f2ad
 
@@ -95,13 +99,14 @@ https://lucid.app/lucidchart/43f4d0c7-daef-464c-a1fb-66d1bf267ce7/edit?viewport_
     - PUT: update certificate color
     - DELETE: delete user
 
-### Future Improvements:**
+## Future Improvements:
+```
 - Add authentication system like login with security
 - Add progress bar on top of each pages
 - Add test cases
 - Improve UI and make better design
 
-👩‍Author:
+## 👩Author:
 
 Nilima Kafle – University of Missouri-St. Louis - [nilimakafle2018@gmail.com](mailto:nilimakafle2018@gmail.com) – [LinkedIn](https://www.linkedin.com/in/nilimak/)
 
