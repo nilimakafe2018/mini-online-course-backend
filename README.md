@@ -44,7 +44,7 @@ https://github.com/nilimakafe2018/mini-online-course-backend.git
 ### 2. Frontend Setup step by step:
 After cloning the repo, navigate to the frontend folder:
 ```bash
-cd your folder name
+cd folder name
 ```
 
 Install dependencies:
@@ -72,7 +72,7 @@ spring.datasource.password=your_password
 ```bash
 http://localhost:8080
 ```
-🎨 ** View the Wireframe here:**
+🎨 **View the Wireframe here:**
 
 https://www.canva.com/design/DAHBPE4rEY0/1yU2vUvkmnaTCmVVv1qYxg/edit
 
@@ -95,8 +95,11 @@ https://lucid.app/lucidchart/43f4d0c7-daef-464c-a1fb-66d1bf267ce7/edit?viewport_
     - PUT: update certificate color
     - DELETE: delete user
 
-
-
+### Future Improvements:**
+- Add authentication system like login with security
+- Add progress bar on top of each pages
+- Add test cases
+- Improve UI and make better design
 
 
 
