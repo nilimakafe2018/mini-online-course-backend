@@ -55,7 +55,26 @@ Start the development server:
 ```bash
 npm rundev
 ```
-After completing all these steps, frontend will run at http://localhost:5173
+After completing all these steps, frontend will run at http://localhost:5175
+
+### 3. Backend Setup step by step:
+
+- Open the backend project in IntelliJ IDEA
+- Make sure that MYSQL is installed and running
+- Update the application.properties file:
+
+```bash
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+```
+- Run the Spring Boot application, backend will run at:
+```bash
+http://localhost:8080
+```
+
+
+
 
 
 
