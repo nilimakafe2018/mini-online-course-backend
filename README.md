@@ -18,3 +18,13 @@ Additionally, returning users are recognized and can skip the course and directl
 - React Router
 - html2canvas library for downloading certificate as image
 
+### Backend
+- Java
+- Spring Boot
+- REST ful APIs
+- Hibernate and JPA
+
+### Database
+- MySQL
+
+
