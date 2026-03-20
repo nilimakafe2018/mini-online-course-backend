@@ -27,4 +27,11 @@ Additionally, returning users are recognized and can skip the course and directl
 ### Database
 - MySQL
 
+### Tools and Platforms
+- Visual Studio Code
+- GitHub
+- IntelliJ IDEA
+- Postman for API testing
+- MYSQL Workbench
+
 
