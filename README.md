@@ -72,6 +72,10 @@ spring.datasource.password=your_password
 ```bash
 http://localhost:8080
 ```
+🎨 View the Wireframe here:
+
+https://www.canva.com/design/DAHBPE4rEY0/1yU2vUvkmnaTCmVVv1qYxg/edit
+
 
 
 
