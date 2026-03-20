@@ -101,8 +101,9 @@ https://lucid.app/lucidchart/43f4d0c7-daef-464c-a1fb-66d1bf267ce7/edit?viewport_
 - Add test cases
 - Improve UI and make better design
 
+👩‍Author:
 
-
+Nilima Kafle – University of Missouri-St. Louis - [nilimakafle2018@gmail.com](mailto:nilimakafle2018@gmail.com) – [LinkedIn](https://www.linkedin.com/in/nilimak/)
 
 
 
