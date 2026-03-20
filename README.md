@@ -34,4 +34,12 @@ Additionally, returning users are recognized and can skip the course and directl
 - Postman for API testing
 - MYSQL Workbench
 
+---
+## How to run this project locally:
+
+### 1. Clone the Repository
+```bash
+https://github.com/nilimakafe2018/mini-online-course-backend.git
+
+
 
