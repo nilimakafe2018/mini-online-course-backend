@@ -72,14 +72,28 @@ spring.datasource.password=your_password
 ```bash
 http://localhost:8080
 ```
-🎨 View the Wireframe here:
+🎨 ** View the Wireframe here:**
 
 https://www.canva.com/design/DAHBPE4rEY0/1yU2vUvkmnaTCmVVv1qYxg/edit
 
-🗂️ ###View the ER diagram here:
+🗂️ **View the ER diagram here:**
 
 https://lucid.app/lucidchart/43f4d0c7-daef-464c-a1fb-66d1bf267ce7/edit?viewport_loc=563%2C4%2C1617%2C935%2C0_0&invitationId=inv_dcb9be36-559b-4083-871b-ba4fe285f2ad
 
+🔑 **Key Features**
+- User registration with name, email and institution
+- Instructional video page
+- Quiz with validation and scoring
+- Conditional navigation based on user performance
+- Certificate generation and download
+- One-to-one relationship between User and Certificate
+- Returning users skip course and directly access their certificate
+- Custom certificate
+- Full CRUD operations: 
+    - POST: create user and certificate
+    - GET: retrieve certificate
+    - PUT: update certificate color
+    - DELETE: delete user
 
 
 
