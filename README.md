@@ -34,12 +34,31 @@ Additionally, returning users are recognized and can skip the course and directl
 - Postman for API testing
 - MYSQL Workbench
 
----
 ## How to run this project locally:
 
 ### 1. Clone the Repository
 ```bash
 https://github.com/nilimakafe2018/mini-online-course-backend.git
+````
+
+### 2. Frontend Setup step by step:
+After cloning the repo, navigate to the frontend folder:
+```bash
+cd your folder name
+```
+
+Install dependencies:
+```bash
+npm install
+```
+Start the development server:
+```bash
+npm rundev
+```
+After completing all these steps, frontend will run at http://localhost:5173
+
+
+
 
 
 
